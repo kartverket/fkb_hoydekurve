@@ -1,5 +1,5 @@
 // Start of UML-model
-=== Pakke: «ApplicationSchema» FKB-Høydekurve-5.0.1
+=== Pakke: «ApplicationSchema» FKB-Høydekurve-5.0.2
 *Definisjon:* Spesifikasjonen omfatter alle data som er nødvendig for å beskrive terrengets form og høyde over et gitt referansenivå som høydekurver, forsenkningskurver, toppunkt etc.
 
 Nye høydekurver genereres hovedsaklig fra en terrengmodell basert på punktskyer fra enten laserskanning eller bildematching. Høydekurvene blir da bare en visning av terrengmodellen. Best informasjon om terrenget fås ved direkte bruk av terrengmodellen.
@@ -39,7 +39,7 @@ Nye høydekurver genereres hovedsaklig fra en terrengmodell basert på punktskye
 |http://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Høydekurve/5.0
  
 |version
-|5.0.1
+|5.0.2
  
 |xmlns
 |app
@@ -522,7 +522,7 @@ SOSI_navn: SIKKERTERRENGGJENGIVELSE +
 |<<datafangsmetodeutvidet,«CodeList» DatafangsmetodeUtvidet>>
 |Profilparametre i tagged values: 
 |
-defalutCodeSpace: https://register.geonorge.no/sosi-kodelister/fkb/hoydekurve/5.0/datafangstmetodeutvidet + 
+defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/fkb/hoydekurve/5.0/datafangstmetodeutvidet + 
 SOSI_datatype: T + 
 SOSI_lengde: 30 + 
 SOSI_navn: DATAKILDE + 
@@ -691,7 +691,7 @@ SOSI_navn: DATAFANGSTDATO +
 |<<medium,«CodeList» Medium>>
 |Profilparametre i tagged values: 
 |
-codeList: https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/medium + 
+defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/medium + 
 SOSI_datatype: T + 
 SOSI_lengde: 1 + 
 SOSI_navn: MEDIUM + 
@@ -732,7 +732,9 @@ SOSI_navn: VERIFISERINGSDATO +
 |<<registreringsversjon,«CodeList» Registreringsversjon>>
 |Profilparametre i tagged values: 
 |
-codeList: https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/registreringsversjon + 
+defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/registreringsversjon + 
+SOSI_datatype: T + 
+SOSI_lengde: 10 + 
 SOSI_navn: REGISTRERINGSVERSJON + 
 |===
 [cols="20,80"]
@@ -765,9 +767,9 @@ SOSI_navn: INFORMASJON +
 |Subtyper:
 |<<kvalitetpåkrevd,«FeatureType» KvalitetPåkrevd>> +
 |Realisering av: 
-|«ApplicationSchema» Generelle typer 5.1/SOSI_Fellesegenskaper og SOSI_Objekt::«FeatureType» SOSI_Objekt +
-|Realisering av: 
 |«ApplicationSchema» Generelle typer 5.1/SOSI_Fellesegenskaper og SOSI_Objekt::«FeatureType» SOSI_Fellesegenskaper +
+|Realisering av: 
+|«ApplicationSchema» Generelle typer 5.1/SOSI_Fellesegenskaper og SOSI_Objekt::«FeatureType» SOSI_Objekt +
 |===
  
 '''
@@ -806,12 +808,12 @@ SOSI_navn: KVALITET +
 |<<fellesegenskaper,«FeatureType» Fellesegenskaper>>
  
 |Subtyper:
-|<<terrenglinje,«featureType» Terrenglinje>> +
+|<<høydekurve,«featureType» Høydekurve>> +
+<<terrengpunkt,«featureType» Terrengpunkt>> +
+<<forsenkningskurve,«featureType» Forsenkningskurve>> +
 <<forsenkningspunkt,«featureType» Forsenkningspunkt>> +
 <<toppunkt,«featureType» Toppunkt>> +
-<<forsenkningskurve,«featureType» Forsenkningskurve>> +
-<<terrengpunkt,«featureType» Terrengpunkt>> +
-<<høydekurve,«featureType» Høydekurve>> +
+<<terrenglinje,«featureType» Terrenglinje>> +
 |Realisering av: 
 |«ApplicationSchema» Generelle typer 5.1/SOSI_Fellesegenskaper og SOSI_Objekt::«FeatureType» SOSI_Objekt +
 |===
@@ -942,7 +944,8 @@ Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for 
 |<<datafangstmetode,«CodeList» Datafangstmetode>>
 |Profilparametre i tagged values: 
 |
-codeList: https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode + 
+defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode + 
+SOSI_datatype: T + 
 SOSI_lengde: 3 + 
 SOSI_navn: DATAFANGSTMETODE + 
 |===
@@ -965,6 +968,7 @@ SOSI_navn: DATAFANGSTMETODE +
 |http://skjema.geonorge.no/SOSI/basistype/Integer[Integer]
 |Profilparametre i tagged values: 
 |
+SOSI_datatype: H + 
 SOSI_lengde: 6 + 
 SOSI_navn: NØYAKTIGHET + 
 |===
@@ -983,7 +987,8 @@ SOSI_navn: NØYAKTIGHET +
 |<<synbarhet,«CodeList» Synbarhet>>
 |Profilparametre i tagged values: 
 |
-codeList: https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/synbarhet + 
+defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/synbarhet + 
+SOSI_datatype: H + 
 SOSI_lengde: 1 + 
 SOSI_navn: SYNBARHET + 
 |===
@@ -1005,7 +1010,7 @@ Det er bare nødvending å angi en verdi for egenskapen dersom datafangstmetode 
 |<<datafangstmetode,«CodeList» Datafangstmetode>>
 |Profilparametre i tagged values: 
 |
-codeList: https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode + 
+defaultCodeSpace: https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode + 
 SOSI_lengde: 3 + 
 SOSI_navn: DATAFANGSTMETODEHØYDE + 
 |===
@@ -1028,6 +1033,7 @@ I de aller fleste sammenhenger benyttes en anslått eller forventet verdi for st
 |http://skjema.geonorge.no/SOSI/basistype/Integer[Integer]
 |Profilparametre i tagged values: 
 |
+SOSI_datatype: H + 
 SOSI_lengde: 6 + 
 SOSI_navn: H-NØYAKTIGHET + 
 |===
