@@ -2,7 +2,7 @@
 ifeval::["{backend}" == "html5"]
 
 ****
-//WARNING: Denne standarden er erstattet av en nyere versjon!
+WARNING: Denne standarden er erstattet av en nyere versjon!
 
 [TIP]
 Dette dokumentet kan også lastes ned link:{prodspek-url}/{versjon}/{datasett}_{versjon}.pdf[som PDF].
@@ -12,7 +12,7 @@ Dette dokumentet kan også lastes ned link:{prodspek-url}/{versjon}/{datasett}_{
 - {prodspek-url}/{versjon}[HTML-dokument] +
 - {uml-url}[HTML-visning av UML-modellen] +
 *Nyeste versjon finnes på*: {prodspek-url} +
-*Denne versjonen erstatter*: {prodspek-forrige-url}[{datasett} {versjon-forrige}] +
+*Denne versjonen erstatter*: {prodspek-forrige-url}[{datasett} {versjon-forrige} - 2022-01-01] +
 *Faglig godkjent av*: Geovekst +
 *Formelt godkjent av*: Kartverket +
 
@@ -26,7 +26,7 @@ ifeval::["{backend}" == "pdf"]
 {empty} +
 
 ****
-//WARNING: Denne standarden er erstattet av en nyere versjon!
+WARNING: Denne standarden er erstattet av en nyere versjon!
 
 *Publisert*: {publisert} +
 *Denne versjonen finnes på*: {prodspek-url}/{versjon} +
