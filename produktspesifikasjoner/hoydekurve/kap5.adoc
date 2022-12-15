@@ -1,5 +1,5 @@
 // Start of UML-model
-=== Pakke: «ApplicationSchema» FKB-Høydekurve-5.0.2
+=== Pakke: «ApplicationSchema» FKB-Høydekurve-5.0.3
 *Definisjon:* Spesifikasjonen omfatter alle data som er nødvendig for å beskrive terrengets form og høyde over et gitt referansenivå som høydekurver, forsenkningskurver, toppunkt etc.
 
 Nye høydekurver genereres hovedsaklig fra en terrengmodell basert på punktskyer fra enten laserskanning eller bildematching. Høydekurvene blir da bare en visning av terrengmodellen. Best informasjon om terrenget fås ved direkte bruk av terrengmodellen.
@@ -36,16 +36,16 @@ Nye høydekurver genereres hovedsaklig fra en terrengmodell basert på punktskye
 |5.0
  
 |targetNamespace
-|http://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Høydekurve/5.0
+|http://skjema.geonorge.no/SOSI/produktspesifikasjon/FKB-Hoydekurve/5.0
  
 |version
-|5.0.2
+|5.0.3
  
 |xmlns
 |app
  
 |xsdDocument
-|FKBHøydekurve.xsd
+|FKBHoydekurve.xsd
  
 |xsdEncodingRule
 |sosi
